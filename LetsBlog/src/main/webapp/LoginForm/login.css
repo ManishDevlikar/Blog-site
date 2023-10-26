@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --black: #212121;
+    --white: #fff;
+    --transparent: transparent;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#img {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+
+#logo {
+    width: 4rem;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+
+form {
+    margin-top: 5rem;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+    background-color: var(--transparent);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+input {
+
+    width: 80%;
+    padding: 1rem 0 1rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #999;
+    color: var(--black);
+    border-radius: 5px;
+    background-color: var(--white);
+    outline: none;
+}
+
+
+input[type] {
+    color: var(--black);
+
+}
+
+input:focus {
+    color: var(--black);
+}
+
+input:hover {
+
+    color: var(--white);
+
+    background-color: var(--black);
+
+}
+
+
+input::placeholder {
+    color: #999;
+    font-size: small;
+}
+
+
+span {
+    color: white;
+    font-size: 0.7rem;
+}
+
+#submit {
+    border-radius: 5px;
+    width: 30%;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--white);
+    background-color: var(--transparent);
+    font-size: 1rem;
+    font-weight: 900;
+    position: relative;
+    transition: 0.08s ease-in;
+
+}
+
+#button-text {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#submit::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.09s ease-in;
+    background: var(--white);
+}
+
+#submit:hover::before {
+
+    top: 0;
+    border-radius: 5px;
+    /* color: var(--white); */
+
+}
+
+#submit:hover {
+    cursor: pointer;
+    color: var(--black);
+
+}
+
+#submit:hover #button-text {
+    color: var(--black);
+}
+
+#sign-in-para {
+    width: 85%;
+}
+
+.sign-in {
+    font-size: 2rem;
+    color: white;
+    font-weight: 900;
+    text-align: center !important;
+}
+
+#sign-in-extras {
+    display: flex;
+    justify-content: left;
+    width: 80%;
+}
+
+#sign-in-extras-conf {
+    margin: 0;
+    padding: 0;
+    color: #777;
+}
+
+#sign-up-now {
+    margin: 0;
+    padding: 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sign-up-now:hover {
+
+    text-decoration: underline;
+}
+
+#page-info {
+    width: 80%;
+    color: white;
+    font-size: 0.85rem;
+}
+
+#page-info p>span {
+    color: rgb(0, 98, 255);
+    cursor: pointer;
+
+}
+
+#page-info p>span:hover {
+
+    border-bottom: 0.5px solid rgb(0, 98, 255);
+
+}
+
+/*--------------------------------------- Media Queries --------------------------------------------------------- */
+
+/* -------------------------(width 425px)----------------------------------- */
+@media (width:425px) {
+    body {
+        background-color: red;
+    }
+
+    form {
+        margin-top: 0rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
+        background-color: var(--transparent);
+        padding: 0rem;
+        border-radius: 0.5rem;
+    }
+
+}
+
+
+
+
+/* -------------------------(width 768px)----------------------------------- */
+
+@media (width:768px) {
+
+
+
+    form {
+        width: 45%;
+        padding: 2rem 0 2rem 0;
+        height: 90%;
+    }
+
+    #submit {
+        width: 40%;
+    }
+}
+
+/* -------------------------(width 1024px)----------------------------------- */
+
+@media (width:1024px) {
+
+
+
+    form {
+        width: 35%;
+        padding: 2rem 0 2rem 0;
+        height: 90%;
+    }
+
+    #submit {
+        width: 50%;
+    }
+}
+
+/* -------------------------(width 1440px)----------------------------------- */
+
+@media (width:1440px) {
+    form {
+        height: 90%;
+    }
+
+    #submit {
+
+        width: 40%;
+
+
+    }
+}

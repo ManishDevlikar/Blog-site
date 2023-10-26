@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --primary-color: #ff6a00;
+    --white: #fff;
+    --gray: #999;
+    --light-gray: #D3D3D3;
+    --black: #212121;
+    --dark-gray: #333;
+    --main-gradient: linear-gradient(90deg, rgba(112, 197, 107, 1) 0%, rgba(75, 172, 109, 1) 35%, rgba(39, 143, 107, 1) 100%);
+}
+
+/* #0A0A0A #121212 #15292B #161618 #181818 #192734 #212121 #212124 #22303C #242526 #282828 #3A3B3C #404040 */
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: var(--white);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+
+#navbar {
+    border-bottom: 0.1px solid var(--white);
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    align-items: center;
+    position: relative;
+}
+
+#navbar-logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#search-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#search {
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    width: 12rem;
+}
+
+#search::placeholder {
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+/* -------search icon------- */
+.fas.fa-search {
+    color: var(--gray);
+    position: absolute;
+    left: 10px;
+    font-size: 1.3rem;
+}
+
+#navbar-logo-div h1 {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+#navbar-logo {
+    width: 4rem;
+}
+
+#navbar-links {}
+
+#navbar-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#navbar-ul li {
+    list-style: none;
+}
+
+#navbar-ul li a {
+    color: white;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --------edit icon------------ */
+.far.fa-edit {
+    font-size: 1.2rem;
+    padding-right: 0.6rem;
+}
+
+#navbar-ul li:nth-child(2) a {
+    color: var(--white);
+    text-decoration: none;
+    background: var(--main-gradient);
+    padding: 0.5rem 0.7rem;
+    border-radius: 50rem;
+    position: relative;
+}
+
+.fas.fa-user {
+    font-size: 1rem;
+}
+
+#user-details {
+    padding: 0;
+    right: 0;
+    position: absolute;
+    width: 25%;
+    height: 45vh;
+    background-color: var(--dark-gray);
+    border-radius: 5px;
+}
+
+#user-details-cont {
+    margin: 0;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#user-details-cont p {
+    margin: 0;
+
+
+}
+
+.user-info {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--gray);
+}
+
+.fas.fa-user.user-profile {
+    font-size: 4rem;
+    padding-bottom: 0.7rem;
+}
+
+.log-out {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--light-gray);
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.log-out::before {
+    content: " ";
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    z-index: -1;
+    position: absolute;
+}
+
+.log-out:hover::before {
+    top: 0;
+}
+
+.log-out:hover {
+    color: var(--black);
+    cursor: pointer;
+}
+
+/* ------To Hide User Info */
+
+.hide-user-details {
+    display: none;
+}
+
+/* ------------------create Blog Section----------------------------------- */
+.create-blog-section {
+    width: 70%;
+    margin: auto;
+    height: 92vh;
+}
+
+.blog-container {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    background-color: var(--black);
+}
+
+.blog-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+}
+
+.create-blog {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--gray);
+
+}
+
+#navbar {
+    position: relative;
+}
+
+.far.fa-times-circle {
+    position: absolute;
+    right: 20%;
+    top: 1.5%;
+    font-size: 2rem;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.Close-blog span {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 16.5%;
+    top: 2.5%;
+    text-align: center;
+    color: var(--gray);
+
+}
+
+.title {
+    outline: none;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+}
+
+.content {
+    border: none;
+    font-size: 1.5rem;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* #navbar {
+    position: relative;
+} */
+.submit {
+    width: 6%;
+    align-self: center;
+    position: absolute;
+    top: 2%;
+    right: 25%;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: var(--white);
+    font-weight: 700;
+}
+
+/* ---------------hide blog section-------------- */
+.hide-blog-section {
+    display: none;
+}
+
+
+
+/* ---------------------- display Blogs-------------------------------- */
+
+.blogs-section {
+    max-width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  margin-bottom: 2rem;
+    grid-gap: 2rem;
+}
+
+.blog-container {
+    max-width: 80%;
+    margin: auto;
+    border: 1px solid var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+
+.hide-border {
+    border: none;
+}
+
+.blog-details {
+    width: 95%;
+    margin: auto;
+}
+
+.blog-details h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.blog-details p {
+    font-size: 1rem;
+}
+
+.blog-content {
+    width: 95%;
+    margin: auto;
+}
+
+.blog-content p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--light-gray);
+}
